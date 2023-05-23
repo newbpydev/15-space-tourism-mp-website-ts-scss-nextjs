@@ -1,8 +1,19 @@
 import { Metadata } from "next";
-import "./globals.scss";
-import { Inter } from "next/font/google";
+import "./styles/index.scss";
+import { Bellefair } from "next/font/google";
+import { Barlow_Condensed } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Bellefair({
+  style: "normal",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const barlowCondensed = Barlow_Condensed({
+  style: "normal",
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Frontend Mentor | Space Tourism Website",
