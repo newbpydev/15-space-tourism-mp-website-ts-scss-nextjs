@@ -8,7 +8,7 @@ export default function Home() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam mollitia
         velit beatae facilis culpa et officia nostrum laudantium rem, alias cum
         deserunt consectetur illo consequuntur nihil deleniti natus tenetur
-        similique?
+        similique? s
       </h1>
     </main>
   );
