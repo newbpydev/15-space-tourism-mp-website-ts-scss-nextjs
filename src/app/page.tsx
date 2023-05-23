@@ -1,15 +1,27 @@
 import Image from "next/image";
 import styles from "./styles/pages/homepage.module.scss";
+import MainNavBar from "./components/navbar/MainNavBar";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main className={styles.main}>
-      <h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam mollitia
-        velit beatae facilis culpa et officia nostrum laudantium rem, alias cum
-        deserunt consectetur illo consequuntur nihil deleniti natus tenetur
-        similique? s
+      <header>
+        <MainNavBar />
+      </header>
+
+      <h1 className={styles.title}>
+        So, you want to travel to <span>Space</span>
       </h1>
+      <p className={styles.description}>
+        Let&apos;s face it; if you want to go to space, you might as well
+        genuinely go to outer space and not hover kind of on the edge of it.
+        Well sit back, and relax because we&apos;ll give you a truly out of this
+        world experience!
+      </p>
+
+      <button type="button" className={styles.button}>
+        Explore
+      </button>
     </main>
   );
 }

@@ -7,7 +7,9 @@ html {
 
 body {
   @include font-body-m-barlow-stack;
-  min-width: 100vh;
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
   overflow-x: hidden;
   background: $color-bg;
   color: $color-primary;

@@ -3,17 +3,17 @@ import "./styles/index.scss";
 import { Bellefair } from "next/font/google";
 import { Barlow_Condensed } from "next/font/google";
 
-const bellefair = Bellefair({
-  style: "normal",
-  subsets: ["latin"],
-  weight: ["400"],
-});
+// const bellefair = Bellefair({
+//   style: "normal",
+//   subsets: ["latin"],
+//   weight: ["400"],
+// });
 
-const barlowCondensed = Barlow_Condensed({
-  style: "normal",
-  weight: "400",
-  subsets: ["latin"],
-});
+// const barlowCondensed = Barlow_Condensed({
+//   style: "normal",
+//   weight: "400",
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: "Frontend Mentor | Space Tourism Website",
