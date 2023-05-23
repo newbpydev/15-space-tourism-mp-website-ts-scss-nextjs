@@ -3,7 +3,7 @@ import "./styles/index.scss";
 import { Bellefair } from "next/font/google";
 import { Barlow_Condensed } from "next/font/google";
 
-const inter = Bellefair({
+const bellefair = Bellefair({
   style: "normal",
   subsets: ["latin"],
   weight: ["400"],
@@ -29,7 +29,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
+      {/* <body className={bellefair.className}>{children}</body> */}
     </html>
   );
 }

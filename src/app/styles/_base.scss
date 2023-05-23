@@ -1,0 +1,15 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include font-body-barlow-stack;
+  min-width: 100vh;
+  overflow-x: hidden;
+  background: $color-bg;
+  color: $color-primary;
+
+}
