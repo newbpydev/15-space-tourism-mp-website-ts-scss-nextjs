@@ -1,11 +1,11 @@
 @use 'variables' as *;
 
 // Font Stack
-@mixin font-body-barlow-stack {
+@mixin font-body-m-barlow-stack {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 400;
-  font-size: $text-body;
-  line-height: 3.2rem;
+  font-size: $text-body-m;
+  line-height: $leading-body-m;
 }
 
 // Media

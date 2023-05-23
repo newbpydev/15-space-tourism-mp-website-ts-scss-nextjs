@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  @include font-body-barlow-stack;
+  @include font-body-m-barlow-stack;
   min-width: 100vh;
   overflow-x: hidden;
   background: $color-bg;
