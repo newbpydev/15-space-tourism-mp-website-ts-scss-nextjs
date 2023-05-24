@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import "./styles/index.scss";
 import { Bellefair } from "next/font/google";
 import { Barlow_Condensed } from "next/font/google";
+import MainNavBar from "./components/navbar/MainNavBar";
 
 // const bellefair = Bellefair({
 //   style: "normal",
@@ -29,7 +30,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className="container">
+          <header>
+            <MainNavBar />
+          </header>
+
+          <>{children}</>
+        </div>
+      </body>
       {/* <body className={bellefair.className}>{children}</body> */}
     </html>
   );

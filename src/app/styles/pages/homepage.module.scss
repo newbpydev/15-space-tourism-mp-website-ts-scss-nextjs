@@ -1,20 +1,38 @@
-@use '../variables';
+@use '../variables' as *;
 
-.main {
-  padding: 2.4rem 2.4rem 4.8rem;
-  background: url('/images/home/background-home-mobile.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 375px;
-  min-height: 100vh;
+.main section {
+  margin-bottom: 8rem;
 }
 
-.title {}
+.title {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
 
 .title span {
   display: block;
+  font-family: $font-bellefair-serif;
+  margin: 1.6rem 0;
+  font-size: 8rem;
+  line-height: 10rem;
+  color: $color-primary;
 }
 
 .description {}
 
-.button {}
+.exploreLink {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12.5rem;
+  height: 12.5rem;
+  line-height: 12.5rem;
+  font-size: 2rem;
+  font-family: $font-bellefair-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.25px;
+  border-radius: 20rem;
+  color: $color-quaternary;
+  background: $color-primary;
+}

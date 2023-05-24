@@ -1,12 +1,17 @@
 import Link from "next/link";
-import React from "react";
 
-import styles from "../../styles/components/MainNavBar.module.scss";
+import logo from "@/app/assets/shared/logo.svg";
+import styles from "../../styles/components/navbar/MainNavBar.module.scss";
+import Image from "next/image";
 
 function MainNavBar() {
   return (
     <nav className={styles.nav}>
-      <div>logo</div>
+      <div>
+        <Link href={"/"}>
+          <Image src={logo} width={40} height={40} alt="Space Tourism Logo" />
+        </Link>
+      </div>
 
       <ul className={styles.links}>
         <li>

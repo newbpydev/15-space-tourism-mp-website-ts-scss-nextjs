@@ -4,6 +4,11 @@ $media-lg: 64em; // 1024px
 $media-xl: 80em; // 1280px
 $media-2xl: 96em; // 1536px
 
+// Font Family
+$font-barlow-sans: 'Barlow Condensed',
+  sans-serif;
+$font-bellefair-serif: 'Bellefair', serif;
+
 // Text Size
 $text-body: 1.8rem;
 $text-body-m: 1.5rem;
@@ -29,6 +34,5 @@ $tracking-widest: 4.725px;
 $color-primary: #fff;
 $color-secondary: #d0d6f9;
 $color-tertiary: #979797;
-
 // BG Color
-$color-bg: #0b0d17;
+$color-quaternary: #0b0d17;
