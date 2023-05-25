@@ -8,7 +8,7 @@ function MainNavBar() {
   return (
     <nav className={styles.nav}>
       <div>
-        <Link href={"/"}>
+        <Link href={"/"} className={styles.logo}>
           <Image src={logo} width={40} height={40} alt="Space Tourism Logo" />
         </Link>
       </div>
