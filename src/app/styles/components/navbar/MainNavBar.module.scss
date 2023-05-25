@@ -1,6 +1,8 @@
 .nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -9,4 +11,8 @@
   &:hover {
     filter: brightness(80%)
   }
+}
+
+.hamburgerIcon {
+  cursor: pointer;
 }

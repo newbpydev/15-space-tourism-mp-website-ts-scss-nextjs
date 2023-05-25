@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./styles/pages/homepage.module.scss";
 import MainNavBar from "./components/navbar/MainNavBar";

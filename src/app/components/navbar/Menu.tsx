@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "@/styles/components/navbar/Menu.module.scss";
+import styles from "@/app/styles/components/navbar/Menu.module.scss";
 
 function Menu() {
   return (

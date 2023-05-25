@@ -1,10 +1,21 @@
+"use client";
 import Link from "next/link";
 
 import logo from "@/app/assets/shared/logo.svg";
+import hamburgerIcon from "@/app/assets/shared/icon-hamburger.svg";
+
 import styles from "../../styles/components/navbar/MainNavBar.module.scss";
 import Image from "next/image";
+import { MouseEventHandler, useState } from "react";
+import Menu from "./Menu";
 
 function MainNavBar() {
+  const [toggleMenu, setToggleMenu] = useState(false);
+
+  const handleClick: MouseEventHandler = () => {
+    setToggleMenu(!toggleMenu);
+  };
+
   return (
     <nav className={styles.nav}>
       <div>
@@ -13,28 +24,18 @@ function MainNavBar() {
         </Link>
       </div>
 
-      <ul className={styles.links}>
-        <li>
-          <Link href={"/"} className={styles.link}>
-            00 Home
-          </Link>
-        </li>
-        <li>
-          <Link href={"/destination"} className={styles.link}>
-            01 Destination
-          </Link>
-        </li>
-        <li>
-          <Link href={"/crew"} className={styles.link}>
-            02 Crew
-          </Link>
-        </li>
-        <li>
-          <Link href={"/technology"} className={styles.link}>
-            03 Technology
-          </Link>
-        </li>
-      </ul>
+      {toggleMenu ? (
+        <Menu />
+      ) : (
+        <Image
+          src={hamburgerIcon}
+          alt=""
+          width={24}
+          height={21}
+          className={styles.hamburgerIcon}
+          onClick={handleClick}
+        />
+      )}
     </nav>
   );
 }
