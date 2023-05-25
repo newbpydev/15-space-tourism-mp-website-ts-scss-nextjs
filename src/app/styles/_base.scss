@@ -16,13 +16,17 @@ body {
 
 }
 
-body>header {}
-
-.container {
-  padding: 2.4rem 2.4rem 4.8rem;
-  background: url('/images/home/background-home-mobile.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 375px;
-  min-height: 100vh;
+body>header {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
+
+// .container {
+//   padding: 2.4rem 2.4rem 4.8rem;
+//   background: url('/images/home/background-home-mobile.jpg');
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   width: 375px;
+//   min-height: 100vh;
+// }

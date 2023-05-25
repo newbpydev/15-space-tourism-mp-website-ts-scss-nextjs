@@ -5,15 +5,14 @@ import closeIcon from "@/app/assets/shared/icon-close.svg";
 import Image from "next/image";
 import path from "path";
 
-// import navigation from
+import navigation from "@/../data/navigation.json";
 
 interface Props {
   onMenuClick: MouseEventHandler;
 }
 
 function Menu({ onMenuClick }: Props) {
-  const navigation = path.resolve(__dirname, "..", "data", "navigation.json");
-  console.log(navigation);
+  // const navigation = path.resolve(__dirname, "..", "data", "navigation.json");
 
   return (
     <div className={styles.menuContainer}>

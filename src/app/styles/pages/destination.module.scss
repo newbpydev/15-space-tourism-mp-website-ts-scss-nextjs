@@ -1,0 +1,6 @@
+@use '../mixins' as *;
+
+.main {
+  @include container('destination');
+
+}

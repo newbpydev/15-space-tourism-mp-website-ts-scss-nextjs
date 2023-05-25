@@ -1,7 +1,11 @@
-import React from "react";
+import styles from "../styles/pages/destination.module.scss";
 
 function DestinationPage() {
-  return <div>DestinationPage</div>;
+  return (
+    <main className={styles.main}>
+      <h1>Destination</h1>
+    </main>
+  );
 }
 
 export default DestinationPage;

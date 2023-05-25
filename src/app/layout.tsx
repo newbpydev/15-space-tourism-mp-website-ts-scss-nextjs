@@ -31,13 +31,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="container">
-          <header>
-            <MainNavBar />
-          </header>
+        <header>
+          <MainNavBar />
+        </header>
 
-          <>{children}</>
-        </div>
+        <>{children}</>
       </body>
       {/* <body className={bellefair.className}>{children}</body> */}
     </html>
