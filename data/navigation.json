@@ -1,0 +1,22 @@
+[
+  {
+    "href": "/",
+    "number": "00",
+    "name": "home"
+  },
+  {
+    "href": "/destination",
+    "number": "01",
+    "name": "destination"
+  },
+  {
+    "href": "/crew",
+    "number": "02",
+    "name": "crew"
+  },
+  {
+    "href": "/technology",
+    "number": "03",
+    "name": "technology"
+  }
+]

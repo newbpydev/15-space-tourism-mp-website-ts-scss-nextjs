@@ -1,3 +1,61 @@
-.links {}
+@use './../../variables' as *;
 
-.link {}
+.menuContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  width: 67.73%;
+  height: 100%;
+  background: rgba(255, 255, 255, .04);
+  backdrop-filter: blur(40.7742px);
+  -webkit-backdrop-filter: blur(40.7742px);
+  padding-top: 3.495rem;
+  padding-left: 3.2rem;
+  z-index: 99;
+
+  & .closeIcon {
+    cursor: pointer;
+    align-self: self-end;
+    margin-right: 26.45px;
+    margin-bottom: 64.95px;
+  }
+
+  & .links {
+    line-height: 1.9rem;
+    letter-spacing: 2.7px;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: $text-nav;
+    color: $color-primary;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.2rem;
+
+  }
+
+  & .link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: .5rem;
+    height: 3.1rem;
+    border-right: 4px solid white;
+
+    &:active {
+      color: blue;
+      ;
+    }
+
+    &Number {
+      // margin-right: .5rem;
+      min-width: 4ch;
+      font-weight: 700;
+    }
+
+    &Name {
+      flex-grow: 1;
+    }
+  }
+}

@@ -25,7 +25,7 @@ function MainNavBar() {
       </div>
 
       {toggleMenu ? (
-        <Menu />
+        <Menu onMenuClick={handleClick} />
       ) : (
         <Image
           src={hamburgerIcon}

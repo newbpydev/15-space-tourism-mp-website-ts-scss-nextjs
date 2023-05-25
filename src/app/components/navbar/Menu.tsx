@@ -1,30 +1,66 @@
 import Link from "next/link";
 import styles from "@/app/styles/components/navbar/Menu.module.scss";
+import { MouseEventHandler } from "react";
+import closeIcon from "@/app/assets/shared/icon-close.svg";
+import Image from "next/image";
+import path from "path";
 
-function Menu() {
+// import navigation from
+
+interface Props {
+  onMenuClick: MouseEventHandler;
+}
+
+function Menu({ onMenuClick }: Props) {
+  const navigation = path.resolve(__dirname, "..", "data", "navigation.json");
+  console.log(navigation);
+
   return (
-    <ul className={styles.links}>
-      <li>
-        <Link href={"/"} className={styles.link}>
-          00 Home
-        </Link>
-      </li>
-      <li>
-        <Link href={"/destination"} className={styles.link}>
-          01 Destination
-        </Link>
-      </li>
-      <li>
-        <Link href={"/crew"} className={styles.link}>
-          02 Crew
-        </Link>
-      </li>
-      <li>
-        <Link href={"/technology"} className={styles.link}>
-          03 Technology
-        </Link>
-      </li>
-    </ul>
+    <div className={styles.menuContainer}>
+      <Image
+        src={closeIcon}
+        width={19.09}
+        height={19.09}
+        alt=""
+        className={styles.closeIcon}
+        onClick={onMenuClick}
+      />
+
+      <ul className={styles.links}>
+        <li>
+          <Link href={"/"} className={styles.link} onClick={onMenuClick}>
+            <span className={styles.linkNumber}>00</span>
+            <span className={styles.linkName}>Home</span>
+          </Link>
+        </li>
+        <li>
+          <Link
+            href={"/destination"}
+            className={styles.link}
+            onClick={onMenuClick}
+          >
+            <p className={styles.linkNumber}>01</p>
+            <p className={styles.linkName}>Destination</p>
+          </Link>
+        </li>
+        <li>
+          <Link href={"/crew"} className={styles.link} onClick={onMenuClick}>
+            <p className={styles.linkNumber}>02</p>
+            <p className={styles.linkName}>Crew</p>
+          </Link>
+        </li>
+        <li>
+          <Link
+            href={"/technology"}
+            className={styles.link}
+            onClick={onMenuClick}
+          >
+            <span className={styles.linkNumber}>03</span>
+            <span className={styles.linkName}>Technology</span>
+          </Link>
+        </li>
+      </ul>
+    </div>
   );
 }
 
