@@ -6,8 +6,7 @@
   flex-direction: column;
   top: 0;
   right: 0;
-  width: 0%;
-  // width: 67.73%;
+  width: 67.73%;
   height: 100vh;
   background: rgba(255, 255, 255, .04);
   backdrop-filter: blur(40.7742px);
@@ -15,10 +14,11 @@
   padding-top: 3.495rem;
   padding-left: 3.2rem;
   z-index: 99;
+
   transition: all 2s ease;
 
-  &.isVisible {
-    width: 67.73%;
+  &.visible {
+    color: green;
   }
 
   & .closeIcon {

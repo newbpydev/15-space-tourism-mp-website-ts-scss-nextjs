@@ -1,9 +1,10 @@
 import Link from "next/link";
 import styles from "../../../app/styles/components/navbar/Menu.module.scss";
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, useState } from "react";
 import closeIcon from "@/app/assets/shared/icon-close.svg";
 import Image from "next/image";
 import path from "path";
+import { CSSTransition } from "react-transition-group";
 
 import { usePathname } from "next/navigation";
 
@@ -52,7 +53,7 @@ function Menu({ onMenuClick }: Props) {
   });
 
   return (
-    <div className={styles.menuContainer + " " + styles.isVisible}>
+    <div className={styles.menuContainer}>
       <Image
         src={closeIcon}
         width={19.09}
