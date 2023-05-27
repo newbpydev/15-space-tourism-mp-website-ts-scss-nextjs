@@ -1,10 +1,22 @@
 import { GetStaticProps } from "next";
 import styles from "../styles/pages/destination.module.scss";
 import path from "path";
+import fs from "fs";
 
 interface Props {}
 
-function DestinationPage() {
+async function DestinationPage() {
+  const url = path.join(process.cwd(), "data/data.json");
+
+  fs.readFile(url, "utf-8", (err, data) => {
+    if (err) {
+      console.error(`Error reading file from disk: ${err}`);
+    } else {
+      const jsonData = JSON.parse(data);
+      console.log(jsonData);
+    }
+  });
+
   return (
     <main className={styles.main}>
       <h1>Destination!</h1>
@@ -13,15 +25,3 @@ function DestinationPage() {
 }
 
 export default DestinationPage;
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  const destination = await fetch(
-    path.join(__dirname, "..", "data", "data.json")
-  );
-  console.log(destination);
-  console.log("ji");
-
-  return {
-    props: {},
-  };
-};
