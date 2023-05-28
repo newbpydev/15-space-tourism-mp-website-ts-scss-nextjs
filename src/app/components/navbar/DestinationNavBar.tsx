@@ -1,8 +1,10 @@
+import styles from "../../styles/components/navbar/DestinationNavBar.module.scss";
+
 function DestinationNavBar() {
   return (
-    <nav>
-      <ul>
-        <li>hi</li>
+    <nav className={styles.nav}>
+      <ul className={styles.list}>
+        <li className={styles.link}>hi</li>
       </ul>
     </nav>
   );
