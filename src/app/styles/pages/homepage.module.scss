@@ -3,6 +3,7 @@
 
 .main {
   @include container('home');
+  padding: 12.1rem 2.4rem 4.8rem;
 
   & section {
     margin-bottom: 8rem;
