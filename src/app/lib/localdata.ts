@@ -3,6 +3,7 @@ import path from "path";
 import { Destination } from "../types/destination";
 import { Crew } from "../types/crew";
 import { Technology } from "../types/technology";
+import { get } from "http";
 
 interface Data {
   destinations: Destination[];
@@ -27,4 +28,14 @@ export const getAllData = async () => {
 export const getDestinations = async () => {
   const data = await getAllData();
   if (data) return data.destinations;
+};
+
+export const getCrew = async () => {
+  const data = await getAllData();
+  if (data) return data.crew;
+};
+
+export const getTechnology = async () => {
+  const data = await getAllData();
+  if (data) return data.technology;
 };
