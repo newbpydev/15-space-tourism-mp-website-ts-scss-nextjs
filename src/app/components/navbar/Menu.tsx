@@ -19,6 +19,10 @@ function Menu({ onMenuClick }: Props) {
 
   const pathnameBase = pathname.split("/")[1];
 
+  const setIsActive = (link: string) => {
+    return link.split("/")[1] === pathnameBase;
+  };
+
   const renderLinks = navigation.map((link) => {
     let isActive: boolean = false;
 
@@ -28,14 +32,14 @@ function Menu({ onMenuClick }: Props) {
         // isActive = link.href === pathname;
         break;
       case "destination":
-        isActive = link.href.includes(pathname);
-        // isActive = link.href === pathname;
+        isActive = link.href.split("/")[1] === pathnameBase;
         break;
       case "crew":
-        isActive = link.href === pathname;
+        isActive = setIsActive(link.href);
         break;
       case "technology":
-        isActive = link.href === pathname;
+        isActive = setIsActive(link.href);
+        // isActive = link.href.includes(pathname);
         break;
       default:
         isActive = false;
