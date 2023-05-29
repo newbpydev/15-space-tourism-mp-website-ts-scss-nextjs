@@ -5,9 +5,9 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname), "styles"],
   },
-  experimental: {
-    typedRoutes: true,
-  },
+  // experimental: {
+  //   typedRoutes: true,
+  // },
 };
 
 module.exports = nextConfig;

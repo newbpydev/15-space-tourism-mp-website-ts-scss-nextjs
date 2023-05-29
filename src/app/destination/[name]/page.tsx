@@ -2,13 +2,10 @@ import styles from "../../styles/pages/destination.module.scss";
 import { getDestinations } from "../../lib/localdata";
 import DestinationCard from "../../components/cards/destination/DestinationCard";
 import Image from "next/image";
-// import { PageProps } from "../../../../.next/types/app/page";
-
-interface Props {}
+import DestinationNavBar from "@/app/components/navbar/DestinationNavBar";
 
 export const generateStaticParams = async () => {
   const destinations = await getDestinations();
-
   const destinationParams = destinations?.map((destination) => {
     return { name: destination.name };
   });
@@ -17,11 +14,9 @@ export const generateStaticParams = async () => {
 
 const getDestination = async (name: string) => {
   const destinations = await getDestinations();
-
   const data = destinations?.find(
     (destination) => destination.name.toLowerCase() === name
   );
-
   return data;
 };
 
@@ -38,26 +33,30 @@ async function DestinationPage({ params, searchParams }: any) {
 
       <article id={`#${destination.name}`} className={styles.card}>
         <Image
-          src={destination.images.webp.slice(1)}
+          src={destination.images.png.slice(1)}
           alt={destination.name}
           width={170}
           height={170}
         />
 
-        <header className={styles.header}>
-          <h2 className={styles.title}>{destination.name}</h2>
-        </header>
+        <div className={styles.navContainer}>
+          <DestinationNavBar />
 
-        <p className={styles.description}>{destination.description}</p>
+          <header className={styles.header}>
+            <h2 className={styles.headerTitle}>{destination.name}</h2>
+          </header>
 
-        <footer className={styles.footer}>
-          <p className={styles.distance}>
-            Avg. Distance <span>{destination.distance}</span>
-          </p>
-          <p className={styles.travel}>
-            Est. Travel Time <span>{destination.travel}</span>
-          </p>
-        </footer>
+          <p className={styles.description}>{destination.description}</p>
+
+          <footer className={styles.footer}>
+            <p className={styles.distance}>
+              Avg. Distance <span>{destination.distance}</span>
+            </p>
+            <p className={styles.travel}>
+              Est. Travel Time <span>{destination.travel}</span>
+            </p>
+          </footer>
+        </div>
       </article>
     </main>
   );

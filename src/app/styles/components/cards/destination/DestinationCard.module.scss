@@ -1,17 +1,22 @@
 .card {
 
-  .header {}
+  .navContainer {
 
-  & .title {}
+    .header {}
 
-  & .description {}
+    & .title {}
 
-  .footer {
+    & .description {}
 
-    .distance {}
+    .footer {
 
-    .travel {}
+      .distance {}
+
+      .travel {}
+    }
+
   }
+
 
 
 

@@ -17,20 +17,24 @@ interface Props {
 function Menu({ onMenuClick }: Props) {
   const pathname = usePathname();
 
-  const renderLinks = navigation.map((link) => {
-    let isActive: boolean;
+  const pathnameBase = pathname.split("/")[1];
 
-    switch (pathname) {
-      case "/":
+  const renderLinks = navigation.map((link) => {
+    let isActive: boolean = false;
+
+    switch (pathnameBase) {
+      case "":
+        isActive = link.href === "/";
+        // isActive = link.href === pathname;
+        break;
+      case "destination":
+        isActive = link.href.includes(pathname);
+        // isActive = link.href === pathname;
+        break;
+      case "crew":
         isActive = link.href === pathname;
         break;
-      case "/destination":
-        isActive = link.href === pathname;
-        break;
-      case "/crew":
-        isActive = link.href === pathname;
-        break;
-      case "/technology":
+      case "technology":
         isActive = link.href === pathname;
         break;
       default:

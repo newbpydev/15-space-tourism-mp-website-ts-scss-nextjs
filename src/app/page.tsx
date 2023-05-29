@@ -1,4 +1,4 @@
-"use client";
+// "use client";s
 
 import styles from "./styles/pages/homepage.module.scss";
 
