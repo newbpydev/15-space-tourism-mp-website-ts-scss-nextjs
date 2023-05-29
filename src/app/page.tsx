@@ -19,7 +19,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      <Link href={"/destination"} className={styles.exploreLink}>
+      <Link href={"/destination/moon"} className={styles.exploreLink}>
         Explore
       </Link>
     </main>

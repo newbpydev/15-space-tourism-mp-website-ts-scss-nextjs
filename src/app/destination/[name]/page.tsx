@@ -1,10 +1,16 @@
-import styles from "../styles/pages/destination.module.scss";
-import { getDestinations } from "../lib/localdata";
-import DestinationCard from "../components/cards/destination/DestinationCard";
+import styles from "../../styles/pages/destination.module.scss";
+import { getDestinations } from "../../lib/localdata";
+import DestinationCard from "../../components/cards/destination/DestinationCard";
+// import { PageProps } from "../../../../.next/types/app/page";
 
 interface Props {}
 
-async function DestinationPage() {
+export const generateStaticParams = async () => {
+  return [{ name: "mars" }];
+};
+
+async function DestinationPage({ params, searchParams }: any) {
+  console.log(params, searchParams);
   const destinations = await getDestinations();
 
   const renderDestination =
