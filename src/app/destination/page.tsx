@@ -7,9 +7,13 @@ interface Props {}
 async function DestinationPage() {
   const destinations = await getDestinations();
 
-  const renderDestination = destinations && (
-    <DestinationCard destination={destinations[0]} />
-  );
+  const renderDestination =
+    destinations &&
+    destinations.map((destination) => {
+      return (
+        <DestinationCard key={destination.name} destination={destination} />
+      );
+    });
 
   return (
     <main className={styles.main}>

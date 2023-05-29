@@ -9,7 +9,7 @@ interface Props {
 
 function DestinationCard({ destination }: Props) {
   return (
-    <article className={styles.card}>
+    <article id={`#${destination.name}`} className={styles.card}>
       <header className={styles.header}>
         <DestinationNavBar />
         <h2 className={styles.title}>{destination.name}</h2>
