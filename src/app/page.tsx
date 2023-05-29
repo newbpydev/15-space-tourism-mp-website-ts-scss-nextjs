@@ -1,7 +1,4 @@
-// "use client";s
-
 import styles from "./styles/pages/homepage.module.scss";
-
 import Link from "next/link";
 
 export default function HomePage() {

@@ -4,6 +4,7 @@ import DestinationCard from "../../components/cards/destination/DestinationCard"
 import Image from "next/image";
 import DestinationNavBar from "@/app/components/navbar/DestinationNavBar";
 
+// @ Generate Static Params
 export const generateStaticParams = async () => {
   const destinations = await getDestinations();
   const destinationParams = destinations?.map((destination) => {
@@ -12,6 +13,7 @@ export const generateStaticParams = async () => {
   return destinationParams;
 };
 
+// @ getDestination()
 const getDestination = async (name: string) => {
   const destinations = await getDestinations();
   const data = destinations?.find(
@@ -20,6 +22,7 @@ const getDestination = async (name: string) => {
   return data;
 };
 
+// * PAGE: Destination
 async function DestinationPage({ params, searchParams }: any) {
   const destination = await getDestination(params.name);
 
@@ -31,6 +34,7 @@ async function DestinationPage({ params, searchParams }: any) {
         <span>01</span> Pick your destination
       </h1>
 
+      {/* Destination Card */}
       <article id={`#${destination.name}`} className={styles.card}>
         <Image
           src={destination.images.png.slice(1)}
