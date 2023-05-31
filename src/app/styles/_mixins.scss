@@ -10,6 +10,22 @@
 
 }
 
+@mixin destination-title-span-data {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  letter-spacing: $tracking-wide;
+  text-transform: uppercase;
+
+  & span {
+    font-family: $font-bellefair-serif;
+    display: block;
+    margin-top: 1.2rem;
+    font-size: $text-h5;
+    line-height: 3.2rem;
+    color: $color-primary;
+  }
+}
+
 @mixin container($page) {
 
   background: url('/images/bg-images/background-' + $page +'-mobile.jpg');
