@@ -1,4 +1,4 @@
-import styles from "../../styles/pages/destination.module.scss";
+import styles from "../../styles/pages/destinationpage.module.scss";
 import { getDestinations } from "../../lib/localdata";
 import DestinationCard from "../../components/cards/destination/DestinationCard";
 import Image from "next/image";
@@ -39,6 +39,7 @@ async function DestinationPage({ params, searchParams }: any) {
         <Image
           src={destination.images.png.slice(1)}
           alt={destination.name}
+          className={styles.image}
           width={170}
           height={170}
         />

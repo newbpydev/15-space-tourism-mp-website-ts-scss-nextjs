@@ -1,0 +1,61 @@
+@use '../mixins' as *;
+@use '../variables' as *;
+
+.main {
+  @include container('destination');
+  padding: 8.8rem 2.4rem 4.8rem;
+
+  .title {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+    line-height: 1.9rem;
+    color: $color-primary;
+    margin-bottom: 3.2rem;
+
+    & span {
+      opacity: .25;
+      mix-blend-mode: normal;
+      margin-right: 1rem;
+    }
+  }
+
+  .card {
+    .image {
+      margin-bottom: 2.6rem;
+    }
+
+    .navContainer {
+
+
+      .header {
+
+
+        .headerTitle {
+          font-family: $font-bellefair-serif;
+          font-size: $text-h3;
+          line-height: 6.4rem;
+          color: $color-primary;
+          margin-bottom: 1px;
+
+        }
+      }
+
+
+      .description {
+        padding-bottom: 3.2rem;
+        border-bottom: 1px solid #383b4b;
+        margin-bottom: 3.2rem;
+      }
+
+
+      .footer {
+
+        .distance {}
+
+        .travel {}
+      }
+
+    }
+  }
+}
