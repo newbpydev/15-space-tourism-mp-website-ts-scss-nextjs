@@ -1,7 +1,11 @@
+"use client";
 import Link from "next/link";
 import styles from "../../styles/components/navbar/DestinationNavBar.module.scss";
+import { usePathname } from "next/navigation";
 
 function DestinationNavBar() {
+  const pathname = usePathname().split("/").pop();
+
   return (
     <nav className={styles.nav}>
       <ul className={styles.list}>

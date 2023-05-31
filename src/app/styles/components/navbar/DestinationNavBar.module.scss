@@ -1,12 +1,16 @@
 .nav {
   // margin: 0 auto;
   margin-bottom: 2rem;
+  text-transform: uppercase;
 
   .list {
     display: flex;
     justify-content: center;
+    column-gap: 2.6rem;
 
 
-    .link {}
+    .link {
+      padding-bottom: .8rem;
+    }
   }
 }
