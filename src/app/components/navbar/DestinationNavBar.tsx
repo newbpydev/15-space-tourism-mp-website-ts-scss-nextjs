@@ -11,39 +11,45 @@ interface Props {
 
 function DestinationNavBar({ activeTab, tabs }: Props) {
   const pathname = usePathname().split("/").pop();
-  // const destinations = getDestinations().then((res) => console.log(res));
 
-  let isActive = false;
+  const renderLinks = tabs.map((tab) => {
+    let isActive: boolean = false;
 
-  switch (pathname) {
-    case "moon":
-      isActive = pathname === activeTab.toLocaleLowerCase();
-      break;
-    case "mars":
-      isActive = pathname === activeTab.toLocaleLowerCase();
-      break;
-    case "europa":
-      isActive = pathname === activeTab.toLocaleLowerCase();
-      break;
-    case "titan":
-      isActive = pathname === activeTab.toLocaleLowerCase();
-      break;
+    switch (pathname) {
+      case "moon":
+        isActive =
+          pathname === activeTab.toLocaleLowerCase() &&
+          pathname === tab.toLocaleLowerCase();
+        break;
+      case "mars":
+        isActive =
+          pathname === activeTab.toLocaleLowerCase() &&
+          pathname === tab.toLocaleLowerCase();
+        break;
+      case "europa":
+        isActive =
+          pathname === activeTab.toLocaleLowerCase() &&
+          pathname === tab.toLocaleLowerCase();
+        break;
+      case "titan":
+        isActive =
+          pathname === activeTab.toLocaleLowerCase() &&
+          pathname === tab.toLocaleLowerCase();
+        break;
+      default:
+        isActive = false;
+        break;
+    }
 
-    default:
-      isActive = false;
-      break;
-  }
-
-  console.log({ pathname, activeTab, isActive });
-
-  const renderLinks = tabs.map((tab) => (
-    <li
-      className={styles.link + (isActive ? " " + styles.active : "")}
-      key={tab}
-    >
-      <Link href={`/destination/${tab.toLocaleLowerCase()}`}>{tab}</Link>
-    </li>
-  ));
+    return (
+      <li
+        className={styles.link + (isActive ? " " + styles.active : "")}
+        key={tab}
+      >
+        <Link href={`/destination/${tab.toLocaleLowerCase()}`}>{tab}</Link>
+      </li>
+    );
+  });
 
   return (
     <nav className={styles.nav}>
