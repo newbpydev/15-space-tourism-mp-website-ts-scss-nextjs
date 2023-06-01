@@ -1,5 +1,5 @@
 import styles from "../../styles/pages/destinationpage.module.scss";
-import { getDestinations } from "../../lib/localdata";
+import { getDestinationTabs, getDestinations } from "../../lib/localdata";
 import DestinationCard from "../../components/cards/destination/DestinationCard";
 import Image from "next/image";
 import DestinationNavBar from "@/app/components/navbar/DestinationNavBar";
@@ -25,6 +25,8 @@ const getDestination = async (name: string) => {
 // * PAGE: Destination
 async function DestinationPage({ params, searchParams }: any) {
   const destination = await getDestination(params.name);
+  const tabs = await getDestinationTabs();
+  // console.log("💥", tabs);
 
   if (!destination) return <p>No data for {params.name}</p>;
 
@@ -45,7 +47,9 @@ async function DestinationPage({ params, searchParams }: any) {
         />
 
         <div className={styles.navContainer}>
-          <DestinationNavBar />
+          {tabs && (
+            <DestinationNavBar tabs={tabs} activeTab={destination.name} />
+          )}
 
           <header className={styles.header}>
             <h2 className={styles.headerTitle}>{destination.name}</h2>

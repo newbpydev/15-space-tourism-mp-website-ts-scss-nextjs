@@ -11,6 +11,10 @@
 
     .link {
       padding-bottom: .8rem;
+
+      &.active {
+        color: green;
+      }
     }
   }
 }

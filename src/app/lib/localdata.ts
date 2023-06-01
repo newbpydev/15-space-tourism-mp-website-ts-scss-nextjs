@@ -21,13 +21,18 @@ export const getAllData = async () => {
     // data = jsonData;
     return jsonData;
   } catch (error) {
-    console.error(`Error reading file from disk: ${error}`);
+    console.error(`Error reading file from data: ${error}`);
   }
 };
 
 export const getDestinations = async () => {
   const data = await getAllData();
   if (data) return data.destinations;
+};
+
+export const getDestinationTabs = async () => {
+  const data = await getDestinations();
+  if (data) return data.map((dest) => dest.name);
 };
 
 export const getCrew = async () => {
