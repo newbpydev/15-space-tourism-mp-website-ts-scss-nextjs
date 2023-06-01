@@ -1,6 +1,6 @@
 import styles from "../styles/pages/crewpage.module.scss";
 
-function CrewPage() {
+async function CrewPage() {
   return <main className={styles.main}>CrewPage</main>;
 }
 
